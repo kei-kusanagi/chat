@@ -48,8 +48,4 @@ defmodule ChatWeb.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug ChatWeb.Router
-
-  socket "/socket", HelloWeb.UserSocket,
-    websocket: true,
-    longpoll: false
 end
