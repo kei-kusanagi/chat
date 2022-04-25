@@ -8,7 +8,7 @@ defmodule ChatWeb.UserSocket do
 
   ## Channels
 
-  channel "room:*", ChatWeb.RoomChannel
+  # channel "room:*", ChatWeb.RoomChannel
   channel "elixir_chat_channel:*", ChatWeb.ElixirChatChannel
 
   # Socket params are passed from the client and can
@@ -29,7 +29,7 @@ defmodule ChatWeb.UserSocket do
 
   # Socket id's are topics that allow you to identify all sockets for a given user:
   #
-  #     def id(socket), do: "user_socket:#{socket.assigns.user_id}"
+  # def id(socket), do: "user_socket:#{socket.assigns.user_id}"
   #
   # Would allow you to broadcast a "disconnect" event and terminate
   # all active sockets and channels for a given user:
