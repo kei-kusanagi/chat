@@ -2,7 +2,7 @@ defmodule ChatWeb.ElixirChatChannel do
   use ChatWeb, :channel
 
   @impl true
-  def join("elixir_chat:lobby", _payload, socket) do
+  def join("elixir_chat_channel:lobby", _payload, socket) do
     {:ok, socket}
   end
 
@@ -10,7 +10,7 @@ defmodule ChatWeb.ElixirChatChannel do
   # by sending replies to requests from the client
 
   # It is also common to receive messages from the client and
-  # broadcast to everyone in the current topic (elixir_chat:lobby).
+  # broadcast to everyone in the current topic (elixir_chat_channel:lobby).
   @impl true
   def handle_in("shout", payload, socket) do
     broadcast(socket, "shout", payload)

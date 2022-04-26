@@ -7,8 +7,6 @@ defmodule ChatWeb.UserSocket do
   # assign values that can be accessed by your channel topics.
 
   ## Channels
-
-  # channel "room:*", ChatWeb.RoomChannel
   channel "elixir_chat_channel:*", ChatWeb.ElixirChatChannel
 
   # Socket params are passed from the client and can

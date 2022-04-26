@@ -49,7 +49,7 @@ defmodule ChatWeb.Endpoint do
   plug Plug.Session, @session_options
   plug ChatWeb.Router
 
-  socket "/socket", HelloWeb.UserSocket,
+  socket "/socket", ChatWeb.UserSocket,
     websocket: true,
     longpoll: false
 end
