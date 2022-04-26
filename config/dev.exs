@@ -2,10 +2,11 @@ import Config
 
 # Configure your database
 config :chat, Chat.Repo,
-  username: "postgres",
-  password: "kei_kusanagi",
+  username: "hdb",
+  password: "hdb",
   hostname: "localhost",
   database: "chat_dev",
+  stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
@@ -22,7 +23,7 @@ config :chat, ChatWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "XKQZt08yijYjc2CERjYI1tHOFyb12p8Obphc6o9bdrFxcc5y11MFi0Q3hfYz9mh+",
+  secret_key_base: "48/ezIkUf+ckf032433WK01stMvAmSj0sS1PV7k5FgRi0OcixqG8Wflrar1Z8Uoj",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}

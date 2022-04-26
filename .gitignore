@@ -1,3 +1,15 @@
+# https://github.com/github/gitignore/blob/main/Elixir.gitignore
+/_build
+/cover
+/deps
+/doc
+/.fetch
+erl_crash.dump
+*.ez
+*.beam
+/config/*.secret.exs
+.elixir_ls/
+
 # The directory Mix will write compiled artifacts to.
 /_build/
 
@@ -20,7 +32,7 @@ erl_crash.dump
 *.ez
 
 # Ignore package tarball (built via "mix hex.build").
-chat-*.tar
+alessis-*.tar
 
 # Ignore assets that are produced by build tools.
 /priv/static/assets/
@@ -31,4 +43,5 @@ chat-*.tar
 # In case you use Node.js/npm, you want to ignore these.
 npm-debug.log
 /assets/node_modules/
-
+priv/static/assets
+priv/static/cache_manifest.json

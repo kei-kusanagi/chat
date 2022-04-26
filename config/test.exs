@@ -6,8 +6,8 @@ import Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :chat, Chat.Repo,
-  username: "postgres",
-  password: "kei_kusanagi",
+  username: "hdb",
+  password: "hdb",
   hostname: "localhost",
   database: "chat_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
@@ -17,7 +17,7 @@ config :chat, Chat.Repo,
 # you can enable the server option below.
 config :chat, ChatWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "duNobRwDwkw8ioGOdRgEvXibr3hFdzrgT7W6wCrXix4rLFwHjuadfQHX64JqebBc",
+  secret_key_base: "wVWrXfial+OfK2fFY0qF/wTSRuLnjuA2bQ2CguclUo9zWti6eha6+5JK72iI2GS1",
   server: false
 
 # In test we don't send emails.
