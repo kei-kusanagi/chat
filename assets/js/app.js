@@ -25,6 +25,10 @@ import "phoenix_html"
 import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
+import ElixirChatChannel from "./elixir_chat_channel"
+import socket from "./user_socket.js"
+
+ElixirChatChannel.init(socket)
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket("/live", Socket, {params: {_csrf_token: csrfToken}})
